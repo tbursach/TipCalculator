@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tip Calculator View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TipCalculatorViewController" customModule="TipCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="ceB-NP-b6j">
+                                <rect key="frame" x="41" y="129" width="332" height="648"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="eB1-bV-xkh">
+                                        <rect key="frame" x="0.0" y="0.0" width="332" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="357-7o-YW2">
+                                                <rect key="frame" x="0.0" y="0.0" width="94.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ke-Mk-HqJ">
+                                                <rect key="frame" x="112.5" y="0.0" width="219.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tK0-4c-Ozd">
+                                        <rect key="frame" x="0.0" y="80" width="332" height="332"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="tK0-4c-Ozd" secondAttribute="height" multiplier="1:1" id="wKX-RC-nmi"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Kze-tb-k79" userLabel="Button Stack View">
+                                        <rect key="frame" x="0.0" y="458" width="332" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yz2-aH-eA8">
+                                                <rect key="frame" x="0.0" y="0.0" width="97.5" height="30"/>
+                                                <state key="normal" title="10%"/>
+                                                <connections>
+                                                    <action selector="tenPercentButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kFR-oh-FZQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcb-sJ-vPF">
+                                                <rect key="frame" x="117.5" y="0.0" width="97" height="30"/>
+                                                <state key="normal" title="15%"/>
+                                                <connections>
+                                                    <action selector="fifteenPercentButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xZE-uY-0rz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMI-xV-00G">
+                                                <rect key="frame" x="234.5" y="0.0" width="97.5" height="30"/>
+                                                <state key="normal" title="20%"/>
+                                                <connections>
+                                                    <action selector="twentyPercentButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8MH-QE-iGl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="qxZ-oh-xpb" userLabel="Tip Amount Stack View">
+                                        <rect key="frame" x="166" y="534" width="166" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyM-wk-OY0">
+                                                <rect key="frame" x="0.0" y="0.0" width="29" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jqi-sx-5Ja">
+                                                <rect key="frame" x="40" y="0.0" width="126" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="gth-li-GWK" userLabel="Check Total Stack View">
+                                        <rect key="frame" x="166" y="614" width="166" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdu-in-D8s">
+                                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TxZ-iM-pFe">
+                                                <rect key="frame" x="52.5" y="0.0" width="113.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Kze-tb-k79" firstAttribute="centerX" secondItem="tK0-4c-Ozd" secondAttribute="centerX" id="I1q-Dk-IK6"/>
+                                    <constraint firstItem="qxZ-oh-xpb" firstAttribute="leading" secondItem="Kze-tb-k79" secondAttribute="centerX" id="VEA-0l-qfb"/>
+                                    <constraint firstItem="gth-li-GWK" firstAttribute="leading" secondItem="qxZ-oh-xpb" secondAttribute="leading" id="XSd-U8-C2U"/>
+                                    <constraint firstItem="eB1-bV-xkh" firstAttribute="leading" secondItem="tK0-4c-Ozd" secondAttribute="leading" id="z29-zu-yuo"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ceB-NP-b6j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="QWh-JU-ny5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ceB-NP-b6j" secondAttribute="trailing" constant="41" id="ZoB-nT-zgZ"/>
+                            <constraint firstItem="ceB-NP-b6j" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.801932" id="eqL-4B-ly1"/>
+                            <constraint firstItem="ceB-NP-b6j" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.723214" id="jmH-mb-Mog"/>
+                            <constraint firstItem="ceB-NP-b6j" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rEa-ja-kj2"/>
+                            <constraint firstItem="ceB-NP-b6j" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="z5h-K4-K1V"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="checkTotalTextField" destination="0ke-Mk-HqJ" id="l9C-Bk-2ad"/>
+                        <outlet property="commentsTextView" destination="tK0-4c-Ozd" id="zU8-dT-8UL"/>
+                        <outlet property="fifteenPercentButton" destination="wcb-sJ-vPF" id="dgy-Ea-fRF"/>
+                        <outlet property="tenPercentButton" destination="yz2-aH-eA8" id="35G-pp-KO4"/>
+                        <outlet property="tipTotalTextField" destination="Jqi-sx-5Ja" id="Xtn-pC-9Dr"/>
+                        <outlet property="totalTextField" destination="TxZ-iM-pFe" id="ObJ-6q-fCu"/>
+                        <outlet property="twentyPercentButton" destination="SMI-xV-00G" id="ECS-Q8-I3U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="103.79464285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
