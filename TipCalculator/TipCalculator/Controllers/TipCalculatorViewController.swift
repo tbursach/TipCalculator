@@ -72,6 +72,10 @@ class TipCalculatorViewController: UIViewController {
         commentsTextView.backgroundColor = .whiteAccent
         tipTotalTextField.backgroundColor = .whiteAccent
         totalTextField.backgroundColor = .whiteAccent
+        tenPercentButton.backgroundColor = .tanAccent
+        fifteenPercentButton.backgroundColor = .tanAccent
+        twentyPercentButton.backgroundColor = .tanAccent
+        
     }
     
     func findTip(checkTotal: Float) {
